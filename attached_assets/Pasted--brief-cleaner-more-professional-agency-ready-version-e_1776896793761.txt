@@ -1,0 +1,862 @@
+নিচে আপনার brief-এর একটি cleaner, more professional, agency-ready version দিলাম। এটা email, WhatsApp, Notion, বা proposal request-এ সরাসরি copy-paste করা যাবে।
+
+You can send this short intro above the brief:
+
+Hi, sharing the product brief and MVP scope for Thikana. Please review and share your recommended tech stack, execution approach, timeline, team composition, cost estimate, milestones, QA process, and post-launch support plan.
+
+⸻
+
+Thikana – Mobile App Product Brief & MVP Scope
+
+1. Project Overview
+
+Product Name: Thikana
+Product Type: Mobile application for rental property discovery and listing
+Primary Market: Bangladesh, with initial focus on Dhaka
+Platforms: Android and iOS
+Preferred Approach: Cross-platform development for speed, consistency, and cost efficiency
+
+Thikana is a location-first rental discovery platform designed to help users easily find nearby flats, rooms, sublets, and short-stay accommodations. The product is intended for a crowded and fragmented rental market where available properties are difficult to discover, compare, and contact quickly.
+
+The app should feel simple, fast, trustworthy, and easy to use, especially for local users across different age groups.
+
+⸻
+
+2. Problem Statement
+
+In Dhaka, rental property discovery is highly scattered and inefficient. Users often do not know:
+
+* where rental homes are available,
+* which areas currently have options,
+* what kind of property fits their needs,
+* whether a listing is suitable for family, bachelor, or student use,
+* and how to quickly contact the owner or host.
+
+Thikana aims to solve this by combining map-based discovery, area-based browsing, and simple listing creation inside one clean mobile experience.
+
+⸻
+
+3. Product Vision
+
+Thikana will be a clean, location-based rental app where users can:
+
+* discover nearby rental properties on a map,
+* browse rental posts by area in a feed format,
+* explore a separate short-stay / Airbnb-style section,
+* contact owners directly via call or text,
+* post their own rental property through a simple flow,
+* access customer support when needed,
+* and use the platform comfortably through a minimal, modern interface.
+
+The hero experience of the product is map discovery, with posts feed as an equally important secondary browsing mode.
+
+⸻
+
+4. Target Users
+
+A. Rent Seekers
+
+Users searching for:
+
+* family flats,
+* bachelor-friendly rentals,
+* student-friendly rentals,
+* single rooms,
+* sublets,
+* or other long-term rental options.
+
+B. Property Owners / Landlords
+
+Users who want to:
+
+* create rental listings,
+* upload property photos and location,
+* and receive calls/messages from interested tenants.
+
+C. Travelers / Short-Stay Guests
+
+Users looking for:
+
+* 1-night stays,
+* 2–7 day stays,
+* furnished temporary accommodation,
+* travel or interview stays,
+* and short-duration housing in Dhaka.
+
+D. Admin / Support Team
+
+Internal team members responsible for:
+
+* reviewing and moderating listings,
+* handling complaints and reports,
+* managing fake or duplicate posts,
+* and maintaining support quality.
+
+⸻
+
+5. Core Product Decisions for MVP
+
+The following assumptions should be treated as part of the MVP scope:
+
+1. Default landing screen after splash is the Maps tab.
+2. Guest users can browse without logging in.
+3. Login is required for posting, saving, and profile/account actions.
+4. Phone OTP login is the preferred authentication method.
+5. Short-stay in MVP is inquiry-based, not full online booking.
+6. Contact methods in MVP can be call, SMS, and/or WhatsApp deep-link.
+7. Listings should go through admin review before being published for trust and quality control.
+
+⸻
+
+6. Design and UX Direction
+
+Visual Style
+
+* Minimal
+* Clean
+* Modern
+* Premium but simple
+* Easy for all age groups
+
+Theme
+
+* Primary palette: Black and White
+* Secondary use: Gray tones for cards, dividers, and borders
+* Action buttons may use a subtle accent if necessary, but the overall UI should remain monochrome and elegant
+
+UX Principles
+
+* Large touch targets
+* Clean iconography
+* Easy-to-read typography
+* Low learning curve
+* Bangla-friendly wording and localization-ready structure
+* Consistent navigation patterns across all major modules
+
+⸻
+
+7. Navigation Structure
+
+The bottom navigation should contain 4 tabs in the following order:
+
+1. Maps
+2. Posts
+3. Stay
+4. More
+
+These are the primary destinations of the application.
+
+⸻
+
+8. Functional Scope
+
+8.1 Maps Tab
+
+This is the main discovery experience of the product.
+
+Objective
+
+Allow users to find nearby rental properties visually through a location-first interface.
+
+Requirements
+
+* Show the user’s current location
+* Allow manual search by area/location
+* Display listings as:
+    * map pins,
+    * building icons,
+    * or clustered markers in dense areas
+* Show the number of listings available in the visible map area
+* Tapping a marker should open a small preview card or bottom sheet
+
+Top Section
+
+* Location search
+* Filter button
+* Optional sort action
+
+Marker Preview Content
+
+* Thumbnail image
+* Rent price
+* Area/location
+* Property type
+* Quick summary such as beds, baths, and suitability tags
+* CTA to open full details
+
+⸻
+
+8.2 Posts Tab
+
+This is the area-based browsing feed for users who prefer scrolling instead of maps.
+
+Objective
+
+Provide a fast, filterable rental feed in list or grid format.
+
+Requirements
+
+* Card list or grid view
+* Infinite scroll / paginated loading
+* Area-based rental feed
+* Search bar at the top
+* Shared filter system with Maps
+* Sorting options such as:
+    * newest,
+    * lowest price,
+    * highest price,
+    * nearest,
+    * most relevant
+
+Listing Card Content
+
+* Cover photo
+* Rent price
+* Area / location
+* Attribute summary such as rooms, baths, balconies
+* Tags such as:
+    * Family
+    * Bachelor
+    * Student
+    * Furnished
+    * Verified (future/admin-controlled)
+
+Add Listing CTA
+
+A prominent floating + button should appear in the bottom-right corner of the Posts screen for creating new listings.
+
+Important Note
+
+Bachelor and Student filters must be clearly visible and easy to use in this section.
+
+⸻
+
+8.3 Listing Detail Page
+
+This screen opens from Maps or Posts.
+
+Required Layout
+
+* Image gallery with 7–8 images
+* Property summary at the top
+* Full description
+* Detailed attributes section
+* Contact actions
+* Customer service option near the end of the page
+
+Required Data Fields
+
+* Title
+* Rent amount
+* Full location / area
+* Bedrooms
+* Bathrooms
+* Balconies
+* Drawing room
+* Furnished / unfurnished
+* Bachelor / student / family suitability
+* Availability date
+* Description
+* Amenities
+* Rules, if applicable
+* Optional map preview
+
+Contact Actions
+
+Primary CTA options:
+
+* Call
+* Text
+
+For MVP, “Text” may be implemented through:
+
+* SMS deep-link,
+* WhatsApp deep-link,
+* or both.
+
+Support Requirement
+
+Every listing detail page must also include:
+
+* Post Contact
+* Contact Customer Service
+
+This should be consistently visible on all listing detail pages.
+
+⸻
+
+8.4 Stay Tab (Short-Stay / Airbnb-Style Section)
+
+This module is for short-term furnished stays.
+
+Use Cases
+
+* 1-night stay
+* 2–7 day stay
+* travel accommodation
+* exam/interview stay
+* temporary furnished stay
+
+Requirements
+
+* Scrollable list or grid of short-stay properties
+* Search by location
+* Filter support
+* Property photos
+* Nightly price
+* Furnished details
+* Guest capacity
+* Room details
+* Contact or booking inquiry action
+
+Stay Filters
+
+* Location
+* Price range
+* Guest capacity
+* Furnished
+* AC / non-AC
+* WiFi
+* Kitchen
+* Attached bath
+* Family-friendly
+* Couple-friendly if applicable
+* Available dates
+
+Posting Support
+
+Users should also be able to post short-stay properties from this section.
+
+MVP Recommendation
+
+Short-stay should be inquiry-based in the first version. Full booking calendar, availability management, and payments can be introduced later.
+
+⸻
+
+8.5 More Tab
+
+This is the menu-style tab.
+
+Required Menu Items
+
+* Profile
+* Rent Your House / Flat
+* Customer Service
+* Saved Posts
+* My Listings
+* Notifications
+* App Settings
+* Help & Support
+* About
+* Logout
+
+⸻
+
+8.6 Profile and Authentication
+
+Required Profile Fields
+
+* Full name
+* Phone number
+* Address
+* Email
+* Profile picture
+* Occupation
+
+Useful Account Sections
+
+* Saved properties
+* Posted listings
+* Recent activity
+* Preferred area
+* Account settings
+
+Authentication Logic
+
+Users should be allowed to browse the app without logging in.
+Authentication should be required for:
+
+* posting listings,
+* saving properties,
+* managing profile,
+* and protected account actions.
+
+Phone OTP login is recommended for the Bangladesh market.
+
+⸻
+
+8.7 Listing Creation Flow
+
+This flow should be accessible from:
+
+* More tab,
+* the + button in Posts,
+* and the Stay section.
+
+Long-Term Rental Listing Form
+
+Required fields:
+
+* Property title
+* Property type (flat / room / sublet / house)
+* Full address
+* Area / location
+* Map pin location
+* Rent amount
+* Advance amount
+* Bedrooms
+* Bathrooms
+* Balconies
+* Drawing room yes/no
+* Dining room yes/no
+* Furnished / unfurnished
+* Bachelor allowed yes/no
+* Student friendly yes/no
+* Family preferred yes/no
+* Available from date
+* Description
+* Contact number
+* Optional WhatsApp number
+* Upload 7–8 images
+
+Short-Stay Listing Form
+
+Additional fields:
+
+* Price per night
+* Guest capacity
+* Check-in time
+* Check-out time
+* Amenities
+* Minimum stay
+* Furnished details
+
+Submission Logic
+
+Listings should be submitted to admin review before publication.
+
+⸻
+
+8.8 Customer Service
+
+Customer support should be accessible from:
+
+* listing detail pages,
+* More tab,
+* and Help & Support areas.
+
+Required Support Options
+
+* Call customer support
+* WhatsApp support
+* Support form / message submission
+* Report fake listing
+* Report wrong information
+* General help
+
+Future enhancement:
+
+* Live support chat
+
+⸻
+
+8.9 Settings
+
+Required Settings
+
+* Dark mode on/off
+* Notifications on/off
+* New rental alerts
+* Nearby rental alerts
+* Saved search alerts
+* Language preference readiness
+* Privacy preferences
+
+Even though the UI is primarily black-and-white, dark mode should still be supported as a separate viewing option.
+
+⸻
+
+9. Shared Search and Filter System
+
+A reusable filter system should be implemented across:
+
+* Maps
+* Posts
+* Stay
+
+Behavior Requirements
+
+* Open via top action or bottom sheet
+* Easy reset/clear functionality
+* Multi-select where relevant
+* Persist until user clears them
+* Show active filter chips on result screens
+
+Long-Term Rental Filters
+
+* Area
+* Price range
+* Rooms
+* Bathrooms
+* Balconies
+* Drawing room
+* Dining space
+* Furnished
+* Bachelor
+* Student
+* Family
+* Flat / room / sublet
+* Parking
+* Lift
+* Gas
+* WiFi
+* Security / gated building
+* Available now / available from date
+
+Short-Stay Filters
+
+* Location
+* Price per night
+* Guests
+* Furnished
+* Amenities
+* Available dates
+
+⸻
+
+10. User Roles and Permissions
+
+Guest User
+
+Can:
+
+* browse Maps
+* browse Posts
+* browse Stay
+* search and apply filters
+
+Cannot:
+
+* create listings
+* manage profile
+* use protected account features
+
+Registered User
+
+Can:
+
+* save listings
+* edit profile
+* create listings
+* manage own listings
+* contact support
+
+Admin
+
+Can:
+
+* approve/reject listings
+* remove suspicious listings
+* manage users
+* review reports
+* manage support requests
+* manage future featured content/promotions
+
+⸻
+
+11. Admin Panel Requirements
+
+A web-based admin panel is recommended.
+
+Required Modules
+
+* Dashboard overview
+* User management
+* Listing management
+* Listing approval/rejection/edit/delete
+* Fake/duplicate listing flagging
+* Reported listings management
+* Support request management
+* Basic analytics, including:
+    * total listings
+    * active users
+    * most searched locations
+    * listing performance
+
+Future-ready support for banners, featured placements, and promotional content is preferred.
+
+⸻
+
+12. Suggested Core Data Structure
+
+User
+
+* id
+* name
+* phone
+* email
+* address
+* occupation
+* profile image
+* role
+* created date
+
+Listing
+
+* id
+* owner_id
+* listing_type (long-term / short-stay)
+* title
+* description
+* property_type
+* rent_or_nightly_price
+* advance_amount
+* location_text
+* latitude
+* longitude
+* rooms
+* baths
+* balconies
+* drawing_room
+* dining_room
+* furnished
+* bachelor_allowed
+* student_friendly
+* family_suitable
+* available_from
+* status
+* created_at
+
+Listing Images
+
+* id
+* listing_id
+* image_url
+* sort_order
+
+Favorites
+
+* user_id
+* listing_id
+
+Inquiry / Contact Log
+
+* user_id
+* listing_id
+* inquiry_type
+* timestamp
+
+Support Ticket / Report
+
+* user_id
+* listing_id (optional)
+* issue_type
+* message
+* status
+
+⸻
+
+13. Technical Recommendations
+
+These are recommendations, not hard requirements.
+
+Mobile App
+
+Preferred:
+
+* Flutter
+* or React Native
+
+Backend
+
+Preferred:
+
+* Node.js (NestJS / Express),
+* Laravel,
+* or Django
+
+Database
+
+* PostgreSQL preferred
+* MySQL acceptable
+
+Maps / Location
+
+* Google Maps SDK
+* Geolocation and geocoding
+* Marker clustering
+
+Authentication
+
+* Phone OTP
+* Email optional
+* Social login later if needed
+
+Storage
+
+* AWS S3 or equivalent cloud storage
+* Image compression is required for performance
+
+Notifications
+
+* Firebase Cloud Messaging
+
+Admin Panel
+
+* React / Next.js or equivalent web dashboard
+
+⸻
+
+14. Non-Functional Requirements
+
+Performance
+
+* Fast loading on low to mid-range Android devices
+* Optimized image handling
+* Lazy loading / pagination for feeds
+* Smooth map interaction
+
+Usability
+
+* Easy for all age groups
+* Clear navigation
+* Readable labels
+* Bangla-friendly copy readiness
+
+Security
+
+* Secure login
+* Basic contact data protection where necessary
+* Abuse/fake listing reporting tools
+* Moderation support
+
+Reliability
+
+* Stable image upload
+* Graceful behavior under poor internet conditions
+* Saved filter state where possible
+
+⸻
+
+15. MVP Scope
+
+Must Have
+
+* Splash animation
+* 4-tab bottom navigation
+* Maps view with nearby rental pins
+* Posts feed
+* Stay section
+* Search by location
+* Shared filter system
+* Listing detail page
+* Call / text actions
+* User profile
+* Rent Your House flow
+* Image upload
+* Customer service access
+* Settings
+* Rental notifications
+* Bachelor and student-friendly filters
+* Admin panel for moderation
+
+Nice to Have
+
+* Save/favorite listings
+* Share listing
+* My Listings management
+* Report listing
+* Featured badge
+
+⸻
+
+16. Future Enhancements
+
+The architecture should support future features such as:
+
+* Verified owner badge
+* In-app chat
+* Booking calendar for short stays
+* Online payments
+* Reviews and ratings
+* Advanced search suggestions
+* Broker / no-broker tags
+* Premium listing promotion
+* Nearby landmarks
+* Multi-language support
+* AI-powered recommendations
+
+⸻
+
+17. Screen Inventory for Design and Development
+
+At minimum, the design and development scope should cover:
+
+* Splash / Intro screen
+* Maps home
+* Map search results
+* Map filter bottom sheet
+* Map marker preview bottom sheet
+* Posts feed
+* Posts filters and sort
+* Stay feed
+* Stay filters
+* Listing detail page
+* Create long-term listing
+* Create short-stay listing
+* Profile
+* Saved posts
+* My Listings
+* Notifications
+* Customer service / Help
+* Settings
+* Login / OTP flow
+* Admin login
+* Admin dashboard
+* Admin listing moderation
+* Admin reports / support management
+
+⸻
+
+18. Deliverables Expected from Development Team
+
+The selected team should provide:
+
+* Mobile app for Android and iOS
+* Admin panel
+* Backend APIs
+* Database setup
+* Map and location integration
+* Image upload infrastructure
+* Notification integration
+* QA / testing build
+* Deployment-ready builds
+* Source code handover
+* Basic technical documentation
+
+⸻
+
+19. Proposal Response Requested from Agency / Developer
+
+Please include the following in your response:
+
+* recommended tech stack,
+* system architecture overview,
+* delivery timeline,
+* milestone breakdown,
+* team composition,
+* QA/testing approach,
+* deployment approach,
+* post-launch support terms,
+* total budget and phase-wise cost breakdown,
+* and any product or UX recommendations for MVP improvement.
+
+⸻
+
+20. One-Line Product Definition
+
+Thikana is a clean, location-based rental discovery app for Dhaka that helps users find nearby flats, rooms, and short-stay homes through maps, posts, and smart filters, while also allowing owners to easily list properties.
+
+⸻
+
+চাইলে next step হিসেবে এটাকে আমি PRD format, SRS format, বা screen-by-screen UI handoff document-এ convert করে আরও structured করে দিতে পারি।

@@ -1,0 +1,38 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "NHVvYy6nENtd0m3nyOHlE"
+uri = "file://artifacts/thikana/assets/images/icon.png"
+type = "image"
+title = "thikana app icon"
+
+[[generated]]
+id = "OZcTTei0mHCRjQ61iYVfe"
+uri = "file://artifacts/thikana/assets/images/property1.png"
+type = "image"
+title = "modern dhaka apartment"
+
+[[generated]]
+id = "NFwX6gWdWo4LCvNK1XvPR"
+uri = "file://artifacts/thikana/assets/images/property2.png"
+type = "image"
+title = "cozy dhaka bedroom"
+
+[[generated]]
+id = "pBKQ6GGiljQNoToQKME-o"
+uri = "file://artifacts/thikana/assets/images/property3.png"
+type = "image"
+title = "dhanmondi building exterior"
+
+[[generated]]
+id = "i1Ps_Ysu84yctSgcmds-X"
+uri = "file://artifacts/thikana/assets/images/property4.png"
+type = "image"
+title = "dhaka kitchen dining"
+
+[[generated]]
+id = "fE31OJukaCHbktYxPUAoF"
+uri = "file://artifacts/thikana/assets/images/property5.png"
+type = "image"
+title = "gulshan studio stay"
