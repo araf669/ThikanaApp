@@ -50,18 +50,21 @@ function RootLayoutNav() {
           },
           headerTintColor: colors.foreground,
           contentStyle: { backgroundColor: colors.background },
+          animation: "slide_from_right",
+          animationDuration: 280,
+          gestureEnabled: true,
         }}
       >
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      <Stack.Screen name="(tabs)" options={{ headerShown: false, animation: "fade" }} />
       <Stack.Screen
         name="listing/[id]"
-        options={{ headerShown: false, presentation: "card" }}
+        options={{ headerShown: false, presentation: "card", animation: "slide_from_right" }}
       />
       <Stack.Screen
         name="create-listing"
-        options={{ title: "Post a listing", presentation: "modal" }}
+        options={{ title: "Post a listing", presentation: "modal", animation: "slide_from_bottom" }}
       />
-      <Stack.Screen name="auth/login" options={{ headerShown: false, presentation: "modal" }} />
+      <Stack.Screen name="auth/login" options={{ headerShown: false, presentation: "modal", animation: "slide_from_bottom" }} />
       <Stack.Screen name="profile" options={{ title: "Profile" }} />
       <Stack.Screen name="saved" options={{ title: "Saved properties" }} />
       <Stack.Screen name="my-listings" options={{ title: "My listings" }} />

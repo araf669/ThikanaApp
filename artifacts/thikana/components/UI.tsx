@@ -25,6 +25,7 @@ import {
 } from "@/constants/data";
 import { useSaved } from "@/context/AppProviders";
 import { useColors } from "@/hooks/useColors";
+import { PressableScale } from "@/components/Motion";
 
 // ----------- Button -----------
 
@@ -72,31 +73,28 @@ export function Button({
     variant === "ghost" ? colors.border : "transparent";
 
   return (
-    <Pressable
+    <PressableScale
       onPress={() => {
         if (disabled || loading) return;
-        if (Platform.OS !== "web")
-          Haptics.selectionAsync().catch(() => {});
         onPress?.();
       }}
       disabled={disabled || loading}
-      style={({ pressed }) => [
-        {
-          backgroundColor: bg,
-          borderColor: border,
-          borderWidth: variant === "ghost" ? 1 : 0,
-          borderRadius: colors.radius,
-          paddingVertical: small ? 9 : 14,
-          paddingHorizontal: small ? 14 : 18,
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "row",
-          gap: 8,
-          opacity: disabled ? 0.45 : pressed ? 0.85 : 1,
-          alignSelf: fullWidth ? "stretch" : "auto",
-        },
-        style,
-      ]}
+      haptic={false}
+      style={{
+        backgroundColor: bg,
+        borderColor: border,
+        borderWidth: variant === "ghost" ? 1 : 0,
+        borderRadius: colors.radius,
+        paddingVertical: small ? 9 : 14,
+        paddingHorizontal: small ? 14 : 18,
+        alignItems: "center",
+        justifyContent: "center",
+        flexDirection: "row",
+        gap: 8,
+        opacity: disabled ? 0.45 : 1,
+        alignSelf: fullWidth ? "stretch" : "auto",
+        ...(style as any),
+      }}
     >
       {loading ? (
         <ActivityIndicator color={fg} size="small" />
@@ -116,7 +114,7 @@ export function Button({
           ) : null}
         </>
       )}
-    </Pressable>
+    </PressableScale>
   );
 }
 
@@ -137,19 +135,17 @@ export function IconButton({
 }) {
   const colors = useColors();
   return (
-    <Pressable
+    <PressableScale
       onPress={onPress}
-      style={({ pressed }) => [
-        {
-          width: 40,
-          height: 40,
-          alignItems: "center",
-          justifyContent: "center",
-          borderRadius: 999,
-          backgroundColor: pressed ? colors.muted : "transparent",
-        },
-        style,
-      ]}
+      scaleTo={0.9}
+      style={{
+        width: 40,
+        height: 40,
+        alignItems: "center",
+        justifyContent: "center",
+        borderRadius: 999,
+        ...(style as any),
+      }}
     >
       <Feather name={name} size={size} color={colors.foreground} />
       {badge && badge > 0 ? (
@@ -178,7 +174,7 @@ export function IconButton({
           </Text>
         </View>
       ) : null}
-    </Pressable>
+    </PressableScale>
   );
 }
 
@@ -197,9 +193,10 @@ export function Chip({
 }) {
   const colors = useColors();
   return (
-    <Pressable
+    <PressableScale
       onPress={onPress}
-      style={({ pressed }) => ({
+      scaleTo={0.94}
+      style={{
         paddingHorizontal: 14,
         paddingVertical: 8,
         borderRadius: 999,
@@ -209,8 +206,7 @@ export function Chip({
         flexDirection: "row",
         alignItems: "center",
         gap: 6,
-        opacity: pressed ? 0.85 : 1,
-      })}
+      }}
     >
       {icon ? (
         <Feather
@@ -228,7 +224,7 @@ export function Chip({
       >
         {label}
       </Text>
-    </Pressable>
+    </PressableScale>
   );
 }
 
@@ -373,18 +369,19 @@ export function ListingCard({
   const cover = PROPERTY_IMAGES[listing.images[0] ?? 0];
 
   return (
-    <Pressable
-      onPress={() =>
-        onPress ?? router.push({ pathname: "/listing/[id]", params: { id: listing.id } })
-      }
-      style={({ pressed }) => ({
+    <PressableScale
+      onPress={() => {
+        if (onPress) onPress();
+        else router.push({ pathname: "/listing/[id]", params: { id: listing.id } });
+      }}
+      scaleTo={0.985}
+      style={{
         backgroundColor: colors.card,
         borderRadius: colors.radius,
         borderWidth: 1,
         borderColor: colors.border,
         overflow: "hidden",
-        opacity: pressed ? 0.92 : 1,
-      })}
+      }}
     >
       <View>
         <Image
@@ -538,7 +535,7 @@ export function ListingCard({
           </Text>
         </View>
       </View>
-    </Pressable>
+    </PressableScale>
   );
 }
 
