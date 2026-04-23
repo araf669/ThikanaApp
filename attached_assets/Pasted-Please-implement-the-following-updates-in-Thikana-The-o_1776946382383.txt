@@ -1,0 +1,231 @@
+Please implement the following updates in Thikana. The overall goal is to make the app feel premium, classy, modern, high-end, Gen Z, and very polished, with a smooth “million-dollar product” feel while keeping the codebase clean and performant.
+
+1) Fix broken interactions and navigation
+
+There are currently touch targets and screens that do not open correctly. Please audit and fix all broken navigation and press handlers.
+
+Required fixes:
+
+* Fix the current tap action that opens a blank/empty screen instead of the intended destination.
+* In the Posts section, every listing card must open the Listing Detail screen on tap.
+* Make sure nested touchables such as heart/favorite buttons, add buttons, and floating buttons do not block full-card navigation.
+* Audit all key interactive areas in the app so every visible button, card, profile row, and external link works correctly and consistently.
+
+2) Listing detail actions
+
+Update the listing detail screen so the bottom action area has 3 primary actions:
+
+* Call
+* Text (in-app chat)
+* WhatsApp (WhatsApp logo/button)
+
+Behavior:
+
+* Call should open the phone dialer using the seller’s number.
+* Text should open a dedicated in-app chat screen.
+* WhatsApp should open WhatsApp chat using the seller’s phone number. If WhatsApp is unavailable, fall back gracefully.
+
+3) In-app chat / text experience
+
+The in-app text screen should feel very premium, smooth, modern, elegant, and expensive.
+
+Required layout:
+
+* Top area should show a round seller profile picture
+* Seller name
+* Active status beside or under the name
+* A call button in the top bar that directly calls the seller
+
+Profile interaction:
+
+* When the user taps the seller profile picture or seller header, open a Seller Profile view or bottom sheet.
+
+Seller Profile should include:
+
+* Seller ID
+* Seller name
+* Profile photo
+* Active status
+* Active listings count
+* Seller’s active listings
+* Any useful info that makes the seller feel trustworthy and professional, such as response time, member status, verified state, location summary, or short seller bio if available
+
+Chat UI requirements:
+
+* Smooth message list scrolling
+* Premium message composer/input area
+* Beautiful dark luxury styling
+* Smooth keyboard behavior
+* Fast, polished send interaction
+* Elegant message bubbles
+* Modern spacing and typography
+* Very refined motion and transitions
+
+The chat screen should feel like a high-end premium messaging UI, not a basic default chat box.
+
+4) Filters glass / blur styling
+
+All filters across the app should have a blurred glass / glassmorphism feel.
+
+Apply this to:
+
+* Filter chips
+* Filter bars
+* Filter modal / bottom sheet
+* Search + filter sections where appropriate
+
+Style direction:
+
+* Soft blur background
+* Semi-transparent dark glass feel
+* Thin subtle borders
+* Smooth shadows
+* Premium layered depth
+* Readable, classy, modern look
+
+The filters should feel elegant and expensive, not flat or basic.
+
+5) Bottom navigation and tab motion
+
+The bottom nav should feel more premium and modern.
+
+Requirements:
+
+* Make tab switching smoother and more refined
+* Add liquid / glass-inspired motion between tabs
+* If feasible, support smooth swipe-based section switching between main bottom-nav sections without causing gesture conflicts
+* The nav should feel inspired by a modern luxury mobile UI, with polished transitions and fluid movement
+
+The goal is not to copy any platform exactly, but to create a soft, premium, glassy, high-end tab experience.
+
+6) Motion and animation quality
+
+The entire app should have buttery smooth, premium-quality motion.
+
+Apply polished motion to:
+
+* Splash screen
+* Screen transitions
+* Tab changes
+* Post card press/open
+* Listing detail entry
+* Filter open/close
+* Bottom sheets
+* In-app chat open
+* Profile/seller sheet open
+* Button press feedback
+* Image transitions where appropriate
+
+Animation direction:
+
+* Smooth fade
+* Soft slide
+* Subtle scale
+* Refined easing
+* Premium motion, never flashy or cheap
+* No janky or laggy movement
+
+The app should feel fast, luxury-grade, soft, and alive.
+
+7) Performance and speed improvements
+
+The app currently feels slow. Please optimize for fast, snappy performance.
+
+Required improvements:
+
+* Reduce screen lag and navigation delay
+* Speed up card opening
+* Speed up initial render and tab switching
+* Improve scroll smoothness
+* Optimize image loading and caching
+* Reduce unnecessary rerenders
+* Use proper list virtualization
+* Prefetch critical assets where useful
+* Avoid heavy animation work on the JS thread
+* Keep blur and glass effects performant
+* Remove any blank/loading delay where a screen appears empty before content loads
+
+Target feel:
+
+* quick response to taps
+* fast screen opens
+* smooth scrolling
+* stable, premium performance on normal devices
+
+8) Premium UI direction
+
+The overall UI should feel:
+
+* premium
+* classy
+* modern
+* luxurious
+* sharp
+* minimal
+* high-end
+* expensive
+* Gen Z but tasteful
+* elegant, not childish
+
+Design direction:
+
+* Dark luxury palette
+* Black / off-black background
+* White and soft gray text
+* Rounded cards and controls
+* Soft elevation
+* Balanced spacing
+* Modern iconography
+* Clean typography hierarchy
+* Premium monochrome look with subtle highlights
+
+The app should look like a serious, polished, premium product, not a prototype.
+
+9) Developer Info section
+
+Keep the Developer Info item in the More / 3 dots menu, placed directly above Logout.
+
+This screen should remain premium and modern. All items must be tappable.
+
+Required developer contact actions:
+
+* Email: amiaraf330@gmail.com
+* Telegram: @hollow6699
+* GitHub: @araf669
+* Instagram: @ayeearaf
+
+Important Instagram fix:
+The Instagram button must open this exact URL:
+https://www.instagram.com/ayee.araf?igsh=MXM4aHp6ZGV2czNs&utm_source=qr
+
+Requirements:
+
+* The button must open this exact link
+* If Instagram app is unavailable, fall back to browser
+* Keep the visible Instagram row polished and consistent with the premium style
+
+10) Expected outcome
+
+After these changes, the app should:
+
+* open every major screen correctly
+* let users open listing cards from Posts
+* provide Call, In-app Text, and WhatsApp actions on listings
+* offer a premium seller chat and seller profile experience
+* use blur glass styling for filters
+* have a more fluid, glassy, premium navigation feel
+* feel much faster, smoother, and snappier
+* look like a polished, high-end production app
+
+11) Final quality bar
+
+This should feel like a premium launch-ready app, with:
+
+* correct interaction behavior
+* smooth motion
+* refined design
+* faster performance
+* luxury-grade visual polish
+* maintainable implementation
+
+Do not treat these as cosmetic-only changes. This is a UX, interaction, motion, and performance polish pass to make Thikana feel truly premium.

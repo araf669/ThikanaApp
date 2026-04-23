@@ -1,5 +1,6 @@
+import { BlurView } from "expo-blur";
 import React, { useState } from "react";
-import { Modal, Pressable, ScrollView, Text, View } from "react-native";
+import { Modal, Platform, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 
 import { AMENITIES_LONG, AMENITIES_STAY, DHAKA_AREAS } from "@/constants/data";
 import { Filters } from "@/context/AppProviders";
@@ -21,23 +22,41 @@ export function FilterSheet({
   mode?: "rent" | "stay";
 }) {
   const colors = useColors();
+  const isDark = colors.scheme === "dark";
   const [draft, setDraft] = useState<Filters>(initial);
 
   const set = (patch: Partial<Filters>) => setDraft((d) => ({ ...d, ...patch }));
 
   const amenityOptions = mode === "stay" ? AMENITIES_STAY : AMENITIES_LONG;
+  const supportsBlur = Platform.OS !== "web";
+  const glassFill = isDark ? "rgba(14,14,18,0.78)" : "rgba(255,255,255,0.78)";
+  const glassBorder = isDark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.08)";
 
   return (
     <Modal visible={visible} animationType="slide" transparent onRequestClose={onClose}>
-      <View style={{ flex: 1, backgroundColor: colors.overlay, justifyContent: "flex-end" }}>
-        <View
+      <Pressable
+        onPress={onClose}
+        style={{ flex: 1, backgroundColor: "rgba(0,0,0,0.55)", justifyContent: "flex-end" }}
+      >
+        <Pressable
+          onPress={() => {}}
           style={{
-            backgroundColor: colors.background,
-            borderTopLeftRadius: 22,
-            borderTopRightRadius: 22,
+            borderTopLeftRadius: 24,
+            borderTopRightRadius: 24,
             maxHeight: "88%",
+            overflow: "hidden",
+            borderTopWidth: 1,
+            borderColor: glassBorder,
+            backgroundColor: supportsBlur ? "transparent" : colors.background,
           }}
         >
+          {supportsBlur ? (
+            <BlurView
+              tint={isDark ? "dark" : "light"}
+              intensity={60}
+              style={[StyleSheet.absoluteFill, { backgroundColor: glassFill }]}
+            />
+          ) : null}
           <View style={{ alignItems: "center", paddingTop: 10 }}>
             <View style={{ width: 36, height: 4, borderRadius: 2, backgroundColor: colors.borderStrong }} />
           </View>
@@ -243,8 +262,8 @@ export function FilterSheet({
               />
             </View>
           </View>
-        </View>
-      </View>
+        </Pressable>
+      </Pressable>
     </Modal>
   );
 }

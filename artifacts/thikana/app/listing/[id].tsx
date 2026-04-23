@@ -1,4 +1,4 @@
-import { Feather } from "@expo/vector-icons";
+import { Feather, FontAwesome } from "@expo/vector-icons";
 import { Image } from "expo-image";
 import { LinearGradient } from "expo-linear-gradient";
 import { router, useLocalSearchParams } from "expo-router";
@@ -13,7 +13,7 @@ import {
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
-import { Button, IconButton } from "@/components/UI";
+import { PressableScale } from "@/components/Motion";
 import { PROPERTY_IMAGES, formatTaka, timeAgo } from "@/constants/data";
 import { useListings, useSaved } from "@/context/AppProviders";
 import { useColors } from "@/hooks/useColors";
@@ -316,7 +316,7 @@ export default function ListingDetail() {
           right: 0,
           bottom: 0,
           paddingTop: 12,
-          paddingHorizontal: 16,
+          paddingHorizontal: 14,
           paddingBottom: insets.bottom + 14,
           backgroundColor: colors.background,
           borderTopWidth: 1,
@@ -325,21 +325,68 @@ export default function ListingDetail() {
           gap: 10,
         }}
       >
-        <View style={{ flex: 1 }}>
-          <Button label="Call" icon="phone" onPress={callOwner} fullWidth />
-        </View>
-        <View style={{ flex: 1 }}>
-          <Button
-            label={Platform.OS === "web" ? "WhatsApp" : "Text"}
-            icon={Platform.OS === "web" ? "message-circle" : "message-square"}
-            variant="ghost"
-            onPress={Platform.OS === "web" ? whatsappOwner : textOwner}
-            fullWidth
-          />
-        </View>
-        <IconButton name="message-circle" onPress={whatsappOwner} />
+        <ActionPill
+          label="Call"
+          icon={<Feather name="phone" size={17} color={colors.background} />}
+          onPress={callOwner}
+          bg={colors.foreground}
+          fg={colors.background}
+        />
+        <ActionPill
+          label="Text"
+          icon={<Feather name="message-square" size={17} color={colors.foreground} />}
+          onPress={() => router.push({ pathname: "/chat/[id]", params: { id: listing.id } })}
+          bg="transparent"
+          fg={colors.foreground}
+          border={colors.border}
+        />
+        <ActionPill
+          label="WhatsApp"
+          icon={<FontAwesome name="whatsapp" size={18} color="#FFFFFF" />}
+          onPress={whatsappOwner}
+          bg="#25D366"
+          fg="#FFFFFF"
+        />
       </View>
     </View>
+  );
+}
+
+function ActionPill({
+  label,
+  icon,
+  onPress,
+  bg,
+  fg,
+  border,
+}: {
+  label: string;
+  icon: React.ReactNode;
+  onPress: () => void;
+  bg: string;
+  fg: string;
+  border?: string;
+}) {
+  return (
+    <PressableScale
+      onPress={onPress}
+      scaleTo={0.96}
+      style={{
+        flex: 1,
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: 7,
+        paddingVertical: 13,
+        borderRadius: 14,
+        backgroundColor: bg,
+        borderWidth: border ? 1 : 0,
+        borderColor: border ?? "transparent",
+      }}
+    >
+      {icon}
+      <Text style={{ color: fg, fontFamily: "Inter_600SemiBold", fontSize: 14 }}>{label}</Text>
+    </PressableScale>
   );
 }
 
