@@ -8,6 +8,8 @@ import {
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
+import { StatusBar } from "expo-status-bar";
+import * as SystemUI from "expo-system-ui";
 import React, { useEffect } from "react";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { KeyboardProvider } from "react-native-keyboard-controller";
@@ -21,14 +23,35 @@ import {
   SavedProvider,
   SettingsProvider,
 } from "@/context/AppProviders";
+import { useColors } from "@/hooks/useColors";
 
 SplashScreen.preventAutoHideAsync();
 
 const queryClient = new QueryClient();
 
 function RootLayoutNav() {
+  const colors = useColors();
+  const isDark = colors.scheme === "dark";
+
+  useEffect(() => {
+    SystemUI.setBackgroundColorAsync(colors.background).catch(() => {});
+  }, [colors.background]);
+
   return (
-    <Stack screenOptions={{ headerBackTitle: "Back" }}>
+    <>
+      <StatusBar style={isDark ? "light" : "dark"} />
+      <Stack
+        screenOptions={{
+          headerBackTitle: "Back",
+          headerStyle: { backgroundColor: colors.background },
+          headerTitleStyle: {
+            color: colors.foreground,
+            fontFamily: "Inter_600SemiBold",
+          },
+          headerTintColor: colors.foreground,
+          contentStyle: { backgroundColor: colors.background },
+        }}
+      >
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       <Stack.Screen
         name="listing/[id]"
@@ -46,7 +69,8 @@ function RootLayoutNav() {
       <Stack.Screen name="notifications" options={{ title: "Notifications" }} />
       <Stack.Screen name="settings" options={{ title: "App settings" }} />
       <Stack.Screen name="about" options={{ title: "About Thikana" }} />
-    </Stack>
+      </Stack>
+    </>
   );
 }
 
