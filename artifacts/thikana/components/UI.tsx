@@ -354,7 +354,9 @@ export function EmptyState({
 
 // ----------- ListingCard -----------
 
-export function ListingCard({
+export const ListingCard = React.memo(ListingCardImpl);
+
+function ListingCardImpl({
   listing,
   onPress,
   variant = "list",

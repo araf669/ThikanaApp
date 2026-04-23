@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { useColorScheme } from "react-native";
 
 import colors from "@/constants/colors";
@@ -6,15 +7,20 @@ import { useSettings } from "@/context/AppProviders";
 /**
  * Returns the design tokens for the current color scheme.
  *
- * Honors the user's in-app theme preference (system / light / dark)
- * from SettingsProvider, falling back to the device color scheme when
- * "system" is selected.
+ * Memoized so consumers don't re-render unless the effective scheme changes.
  */
 export function useColors() {
   const systemScheme = useColorScheme();
   const { settings } = useSettings();
   const effective =
     settings.theme === "system" ? systemScheme : settings.theme;
-  const palette = effective === "dark" ? colors.dark : colors.light;
-  return { ...palette, radius: colors.radius, scheme: effective ?? "light" };
+
+  return useMemo(
+    () => ({
+      ...(effective === "dark" ? colors.dark : colors.light),
+      radius: colors.radius,
+      scheme: (effective ?? "light") as "light" | "dark",
+    }),
+    [effective],
+  );
 }

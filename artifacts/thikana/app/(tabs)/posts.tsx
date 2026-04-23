@@ -65,6 +65,10 @@ export default function PostsScreen() {
       <FlatList
         data={visible}
         keyExtractor={(i) => i.id}
+        initialNumToRender={6}
+        maxToRenderPerBatch={6}
+        windowSize={7}
+        removeClippedSubviews={Platform.OS !== "web"}
         contentContainerStyle={{
           paddingTop: topPadding,
           paddingBottom: bottomPadding,
