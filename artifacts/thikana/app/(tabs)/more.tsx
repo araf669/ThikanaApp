@@ -36,10 +36,10 @@ export default function MoreScreen() {
   ];
 
   const support: Item[] = [
-    { icon: "headphones", label: "Customer service", href: "/customer-service" },
     { icon: "settings", label: "App settings", href: "/settings" },
     { icon: "help-circle", label: "Help & support", href: "/customer-service" },
     { icon: "info", label: "About Thikana", href: "/about" },
+    { icon: "code", label: "Developer Info", href: "/developer-info" },
   ];
 
   const auth: Item[] = user

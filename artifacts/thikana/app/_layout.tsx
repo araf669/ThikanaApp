@@ -69,6 +69,7 @@ function RootLayoutNav() {
       <Stack.Screen name="notifications" options={{ title: "Notifications" }} />
       <Stack.Screen name="settings" options={{ title: "App settings" }} />
       <Stack.Screen name="about" options={{ title: "About Thikana" }} />
+      <Stack.Screen name="developer-info" options={{ title: "Developer Info" }} />
       </Stack>
     </>
   );

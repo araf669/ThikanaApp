@@ -1,0 +1,87 @@
+Add a new screen called Developer Info inside the More / 3 dots menu, placed directly above Logout.
+
+The UI for this screen must feel very modern, high-end, Gen Z, premium, and visually clean, while still being lightweight and practical to build. It should look expensive in design, but not require overly complex development. The goal is a luxury minimal feel using simple components, smooth spacing, bold typography, soft cards, subtle blur/shadow, and polished icon styling.
+
+Design direction
+
+The screen should have:
+
+* a dark premium aesthetic
+* black / off-black background
+* white and soft gray text
+* subtle accent glow or gradient highlights if needed
+* rounded cards
+* clean spacing
+* sleek modern icons
+* smooth, minimalist layout
+* stylish but not cluttered
+
+The vibe should be:
+premium + youthful + creative + startup-level polished
+
+Think:
+
+* elegant profile section
+* minimal but expressive layout
+* social/contact items styled like modern profile cards
+* refined typography hierarchy
+* premium monochrome interface with optional muted accent tones
+
+Layout structure
+
+Top section
+
+* profile image or minimal avatar
+* name: Araf
+* role: Developer · Builder · Product Mind
+* short bio under name
+
+Bio text
+Built by Araf — a developer focused on clean design, smooth user experience, and modern products that solve real-life problems.
+
+Contact section
+Show the following as modern tappable cards or rows:
+
+* Email: amiaraf330@gmail.com
+* Telegram: @hollow6699
+* GitHub: @araf669
+* Instagram: @ayeearaf
+
+Each item should open the correct external app or link when tapped.
+
+Bottom line
+Available for collaboration, product ideas, and creative digital projects.
+
+UI style requirements
+
+* use large clean heading text
+* use slightly bold modern font styling
+* use rounded glassy or soft elevated cards
+* add subtle separators or spacing instead of harsh borders
+* keep the screen premium and breathable
+* avoid old-fashioned list styling
+* avoid generic settings-page look
+* make it feel like a designer portfolio card inside the app
+
+Development approach
+
+Keep implementation simple but visually premium:
+
+* standard React Native / Expo components are fine
+* use soft shadows, border radius, spacing, and typography to create the premium look
+* avoid heavy animations unless very lightweight
+* optional subtle fade-in on screen load
+* optional press feedback on each social/contact card
+* no need for expensive custom graphics
+
+Menu order
+
+* App Settings
+* Help & Support
+* About Thikana
+* Developer Info
+* Logout
+
+Final objective
+
+This screen should feel like a premium personal signature section inside the app — modern, fashionable, high-end, and Gen Z-friendly — while still being easy and budget-friendly to code.
