@@ -1,0 +1,73 @@
+Add premium-grade motion across the app with a focus on buttery smooth, polished, high-end transitions that feel expensive and refined. Animations should feel modern, fluid, and intentional — not flashy, not overloaded, and never laggy. The target experience is a luxury-level app feel with fast, silky, responsive motion, while still keeping implementation efficient and realistic.
+
+Motion direction
+
+The animation system should feel:
+
+* buttery smooth
+* premium
+* elegant
+* responsive
+* modern
+* soft and refined
+* high-end startup quality
+
+The app should not feel static. Every important interaction should have subtle, polished motion.
+
+Core animation requirements
+
+Apply smooth transitions to:
+
+* splash screen logo reveal
+* screen-to-screen navigation
+* bottom tab switching
+* opening filters
+* map to detail interactions
+* post card tap to detail page
+* modal and bottom sheet opening/closing
+* button press feedback
+* profile/developer info screen entry
+* image gallery transitions
+* loading states and skeletons
+
+Animation style
+
+Use:
+
+* soft fade
+* smooth slide
+* subtle scale
+* elegant bottom sheet motion
+* polished card press interaction
+* smooth opacity transitions
+* refined easing curves
+
+Avoid:
+
+* harsh bounce
+* overly dramatic motion
+* slow heavy animations
+* jittery transitions
+* cheap-feeling default transitions
+
+Performance requirement
+
+Animations must remain smooth and responsive on normal devices. Motion should feel premium without hurting performance. Optimize for fluidity and responsiveness, especially on mobile.
+
+Specific expectations
+
+* tab changes should feel seamless and premium
+* cards should have subtle press-in/press-out feedback
+* bottom sheets should glide smoothly
+* screens should fade/slide in elegantly
+* interactive elements should feel alive but controlled
+* loading states should look modern and polished
+* transitions should give a “million-dollar product” feel
+
+Development direction
+
+Implement a lightweight but premium animation system using efficient mobile-friendly animation practices. Favor smooth native-feeling transitions and reusable motion patterns across the app. Keep the motion design consistent throughout the entire product.
+
+Final objective
+
+The entire app should feel very smooth, very premium, and very expensive in motion quality — like a high-end modern startup app with carefully crafted interactions and buttery transitions throughout.

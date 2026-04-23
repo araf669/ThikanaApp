@@ -46,8 +46,8 @@ const SOCIALS: Social[] = [
   {
     icon: "instagram",
     label: "Instagram",
-    handle: "@ayeearaf",
-    url: "https://instagram.com/ayeearaf",
+    handle: "@ayee.araf",
+    url: "https://www.instagram.com/ayee.araf?igsh=MXM4aHp6ZGV2czNs&utm_source=qr",
     accent: "#F472B6",
   },
 ];
